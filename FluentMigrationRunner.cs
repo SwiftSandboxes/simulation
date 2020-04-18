@@ -17,17 +17,17 @@ namespace simulation
         {
             return new ServiceCollection()
                 // Add common FluentMigrator services
-                // .AddFluentMigratorCore()
-                // .ConfigureRunner(rb => rb
-                //     // Add SQLite support to FluentMigrator
-                //     .AddSQLite()
-                //     // Set the connection string
-                //     .WithGlobalConnectionString("Data Source=test.db")
-                //     // Define the assembly containing the migrations
-                //     .ScanIn(typeof(AddLogTable).Assembly).For.Migrations())
-                // // Enable logging to console in the FluentMigrator way
-                // .AddLogging(lb => lb.AddFluentMigratorConsole())
-                // // Build the service provider
+                .AddFluentMigratorCore()
+                .ConfigureRunner(rb => rb
+                    // Add MySql support to FluentMigrator
+                    .AddMySql5()
+                    // Set the connection string
+                    .WithGlobalConnectionString("Server=127.0.0.1;Port=3306;Database=simulation;Uid=simulationUser;Pwd=JabbatheSimulator1078;")
+                    // Define the assembly containing the migrations
+                    .ScanIn(typeof(AddLogTable).Assembly).For.Migrations())
+                // Enable logging to console in the FluentMigrator way
+                .AddLogging(lb => lb.AddFluentMigratorConsole())
+                // Build the service provider
                 .BuildServiceProvider(false);
         }
 
