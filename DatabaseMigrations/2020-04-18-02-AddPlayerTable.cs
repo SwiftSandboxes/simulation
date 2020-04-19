@@ -1,9 +1,9 @@
 using FluentMigrator;
 
-namespace simulation
+namespace simulation.DatabaseMigrations
 {
     [Migration(2020041802)]
-    public class Player : Migration
+    public class AddPlayerTable : Migration
     {
         public override void Up()
         {
@@ -23,7 +23,7 @@ namespace simulation
 
         public override void Down()
         {
-            Delete.Table("Log");
+            Delete.Table("Player");
         }
     }
 }

@@ -1,6 +1,6 @@
 using FluentMigrator;
 
-namespace simulation
+namespace simulation.DatabaseMigrations
 {
     [Migration(2020041801)]
     public class AddLogTable : Migration
