@@ -15,8 +15,6 @@ namespace simulation
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
-
             var serviceProvider = FluentMigrationRunner.CreateServices();
 
             // Put the database update into a scope to ensure
@@ -24,7 +22,9 @@ namespace simulation
             using (var scope = serviceProvider.CreateScope())
             {
                 FluentMigrationRunner.UpdateDatabase(scope.ServiceProvider);
-            }            
+            }    
+
+            CreateHostBuilder(args).Build().Run();                    
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
