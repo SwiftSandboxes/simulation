@@ -25,8 +25,8 @@ namespace simulation
                     .WithGlobalConnectionString("Server=127.0.0.1;Port=3306;Database=simulation;Uid=simulationUser;Pwd=JabbatheSimulator1078;")
                     // Define the assembly containing the migrations
                     .ScanIn(typeof(AddLogTable).Assembly).For.Migrations()
-                    // Define the assembly containing the migrations
-                    .ScanIn(typeof(AddPlayerTable).Assembly).For.Migrations())                    
+                    .ScanIn(typeof(AddPlayerTable).Assembly).For.Migrations()
+                    .ScanIn(typeof(Migration2020042001).Assembly).For.Migrations())                    
                 // Enable logging to console in the FluentMigrator way
                 .AddLogging(lb => lb.AddFluentMigratorConsole())
                 // Build the service provider
