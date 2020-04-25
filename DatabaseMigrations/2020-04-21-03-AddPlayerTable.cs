@@ -11,8 +11,12 @@ namespace bballsim.league.simulation.DatabaseMigrations
                 .WithColumn("PlayerId").AsInt64().PrimaryKey().Identity()
                 .WithColumn("Appearance").AsString()
                 .WithColumn("BirthDate").AsDate()
+                .WithColumn("College").AsString()
                 .WithColumn("FirstName").AsString()
+                .WithColumn("HeightInCm").AsInt32()
+                .WithColumn("HomeTown").AsString()
                 .WithColumn("LastName").AsString()
+                .WithColumn("WeightInGrams").AsInt32()
                 .WithColumn("PlayerProgressionModelId").AsInt32()   //model for player improvement/decline
                 
                 .WithColumn("Assist").AsInt32()
