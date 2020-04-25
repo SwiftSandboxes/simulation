@@ -4,9 +4,9 @@ using System.Linq;
 using FluentMigrator.Runner;
 
 using Microsoft.Extensions.DependencyInjection;
-using simulation.DatabaseMigrations;
+using bballsim.league.simulation.DatabaseMigrations;
 
-namespace simulation
+namespace bballsim.league.simulation
 {
     public static class FluentMigrationRunner
     {
@@ -24,9 +24,11 @@ namespace simulation
                     // Set the connection string
                     .WithGlobalConnectionString("Server=127.0.0.1;Port=3306;Database=simulation;Uid=simulationUser;Pwd=JabbatheSimulator1078;")
                     // Define the assembly containing the migrations
-                    .ScanIn(typeof(AddLogTable).Assembly).For.Migrations()
-                    .ScanIn(typeof(AddPlayerTable).Assembly).For.Migrations()
-                    .ScanIn(typeof(Migration2020042001).Assembly).For.Migrations())                    
+                    .ScanIn(
+                         typeof(M_2020_04_18_01_AddLogTable).Assembly
+                        ,typeof(M_2020_04_21_01_AddPlayerProgressionModel).Assembly
+                        ,typeof(M_2020_04_21_02_AddPlayerProgression).Assembly
+                        ,typeof(M_2020_04_21_03_AddPlayer).Assembly).For.Migrations())                    
                 // Enable logging to console in the FluentMigrator way
                 .AddLogging(lb => lb.AddFluentMigratorConsole())
                 // Build the service provider

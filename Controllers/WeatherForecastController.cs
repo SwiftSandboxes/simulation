@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace simulation.Controllers
+namespace bballsim.league.simulation.Controllers
 {
     [ApiController]
     [Route("[controller]")]

@@ -1,23 +1,21 @@
 using FluentMigrator;
 
-namespace simulation.DatabaseMigrations
+namespace bballsim.league.simulation.DatabaseMigrations
 {
-    [Migration(2020042003)]
-    public class Migration2020042003 : Migration
+    [Migration(2020042102)]
+    public class M_2020_04_21_02_AddPlayerProgression : Migration
     {
         public override void Up()
         {
-            Delete.Table("Player");
-
-            Create.Table("Player")
-                .WithColumn("PlayerId").AsInt64().PrimaryKey().Identity()
-                .WithColumn("Appearance").AsString()
-                .WithColumn("BirthDate").AsDate()
-                .WithColumn("FirstName").AsString()
-                .WithColumn("LastName").AsString()
-                .WithColumn("PlayerProgressionModelId").AsInt32()   //model for player improvement/decline
+            Create.Table("PlayerProgression")
+                .WithColumn("PlayerProgressionId").AsInt32().PrimaryKey().Identity()
+                .WithColumn("PlayerProgressionModelId").AsInt32()   //make this a foreign key to PlayerProgressionModel
+                .WithColumn("Age").AsInt32()
                 
-                .WithColumn("Assist").AsInt32()
+                .WithColumn("Appearance").AsString()        //modifications to appearance, thicker beard, grey hair, hair loss, etc
+
+                //The following are adjustment values (+ or -), depending on the players age.
+                .WithColumn("Assist").AsInt32()             
                 .WithColumn("AssistDefense").AsInt32()      //defensive awareness
                 .WithColumn("Block").AsInt32()          
                 .WithColumn("BlockDefense").AsInt32()       //creativity, elusiveness
@@ -40,7 +38,7 @@ namespace simulation.DatabaseMigrations
 
         public override void Down()
         {
-            Delete.Table("Player");
+            Delete.Table("PlayerProgression");
         }
     }
 }
