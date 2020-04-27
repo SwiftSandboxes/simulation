@@ -4,9 +4,9 @@ using System.Linq;
 using FluentMigrator.Runner;
 
 using Microsoft.Extensions.DependencyInjection;
-using bballsim.league.simulation.DatabaseMigrations;
+using bballsim.simulation.DatabaseMigrations;
 
-namespace bballsim.league.simulation
+namespace bballsim.simulation
 {
     public static class FluentMigrationRunner
     {
