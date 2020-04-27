@@ -1,6 +1,6 @@
 using System;
 
-namespace bballsim.league.simulation
+namespace bballsim.simulation
 {
     public class WeatherForecast
     {

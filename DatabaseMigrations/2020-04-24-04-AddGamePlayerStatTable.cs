@@ -1,6 +1,6 @@
 using FluentMigrator;
 
-namespace bballsim.league.simulation.DatabaseMigrations
+namespace bballsim.simulation.DatabaseMigrations
 {
     [Migration(2020042404)]
     public class M_2020_04_24_04_AddGamePlayerStat : Migration

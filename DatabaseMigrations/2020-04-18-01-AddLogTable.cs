@@ -1,6 +1,6 @@
 using FluentMigrator;
 
-namespace bballsim.league.simulation.DatabaseMigrations
+namespace bballsim.simulation.DatabaseMigrations
 {
     [Migration(2020041801)]
     public class M_2020_04_18_01_AddLogTable : Migration

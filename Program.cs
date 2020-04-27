@@ -9,7 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 
-namespace bballsim.league.simulation
+namespace bballsim.simulation
 {
     public class Program
     {
