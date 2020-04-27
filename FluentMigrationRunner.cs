@@ -26,8 +26,6 @@ namespace bballsim.simulation
                     // Define the assembly containing the migrations
                     .ScanIn(
                          typeof(M_2020_04_18_01_AddLogTable).Assembly
-                        ,typeof(M_2020_04_21_01_AddPlayerProgressionModel).Assembly
-                        ,typeof(M_2020_04_21_02_AddPlayerProgression).Assembly
                         ,typeof(M_2020_04_21_03_AddPlayer).Assembly
                         ,typeof(M_2020_04_24_01_AddTeam).Assembly
                         ,typeof(M_2020_04_24_02_AddGame).Assembly
