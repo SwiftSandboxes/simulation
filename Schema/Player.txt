@@ -1,0 +1,30 @@
+PlayerId
+Appearance
+FirstName
+LastName
+
+Assists
+AssistDefense (defensive awareness)
+
+Blocks
+BlockDefense (creativity, elusiveness)
+
+Fouls
+FoulDefense (ability to draw fouls)
+
+Rebounds (offensive rebounding)
+ReboundDefense (defensive rebounding)
+
+Shots
+ShotDefense (on ball defense)
+
+Steals
+StealDefense (ballhandling)
+
+ThreePointShots
+
+Turnovers
+TurnoverDefense (ballhandling 2)
+
+ThreePointLikelihood (2 pt vs 3 pt shooting - range)
+
