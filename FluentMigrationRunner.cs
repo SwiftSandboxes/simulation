@@ -25,11 +25,11 @@ namespace bballsim.simulation
                     .WithGlobalConnectionString("Server=127.0.0.1;Port=3306;Database=simulation;Uid=simulationUser;Pwd=JabbatheSimulator1078;")
                     // Define the assembly containing the migrations
                     .ScanIn(
-                         typeof(M_2020_04_18_01_AddLogTable).Assembly
-                        ,typeof(M_2020_04_21_03_AddPlayer).Assembly
-                        ,typeof(M_2020_04_24_01_AddTeam).Assembly
-                        ,typeof(M_2020_04_24_02_AddGame).Assembly
-                        ,typeof(M_2020_04_24_03_AddSimSchedule).Assembly).For.Migrations())                    
+                         typeof(M_00001_AddLogTable).Assembly
+                        ,typeof(M_00002_AddPlayer).Assembly
+                        ,typeof(M_00003_AddTeam).Assembly
+                        ,typeof(M_00004_AddGame).Assembly
+                        ,typeof(M_00005_AddSimSchedule).Assembly).For.Migrations())                    
                 // Enable logging to console in the FluentMigrator way
                 .AddLogging(lb => lb.AddFluentMigratorConsole())
                 // Build the service provider

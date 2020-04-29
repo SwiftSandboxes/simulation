@@ -2,8 +2,8 @@ using FluentMigrator;
 
 namespace bballsim.simulation.DatabaseMigrations
 {
-    [Migration(2020042103)]
-    public class M_2020_04_21_03_AddPlayer : Migration
+    [Migration(00002)]
+    public class M_00002_AddPlayer : Migration
     {
         public override void Up()
         {
