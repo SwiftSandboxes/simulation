@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using bballsim.simulation.Model;
 
 namespace bballsim.simulation.Controllers
 {

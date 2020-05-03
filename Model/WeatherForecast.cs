@@ -1,6 +1,6 @@
 using System;
 
-namespace bballsim.simulation
+namespace bballsim.simulation.Model
 {
     public class WeatherForecast
     {
